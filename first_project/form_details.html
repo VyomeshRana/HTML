@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body>
+  <form action="">
+    <!-- Student Details form -->
+    <fieldset>
+      <legend>
+        <h1>STUDENT DETAILS</h1>
+      </legend>
+      <table width="100%" height="100%" border="0">
+        <tr>
+          <!-- first name -->
+          <td>
+            <label for="fname">First Name: </label><input width="100%" type="text" id="fname"
+              placeholder="e.g Vyoemsh" />
+          </td>
+          <td>
+            <!-- last name -->
+            <label for="lname">Last Name: </label><input width="100%" type="text" id="lname" placeholder="e.g Rana" />
+          </td>
+          <td>
+            <!-- father -->
+            <label for="fatname">Father's Name: </label><input type="text" id="fatname" />
+          </td>
+          <!-- mother -->
+          <td>
+            <label for="moname">Mother's Name: </label><input type="text" id="moname" />
+          </td>
+
+          <tr >
+            <td colspan="4">
+              <hr>
+            </td>
+          </tr>
+
+
+
+          <!-- date of birth -->
+          <!-- 
+          <td>
+            <label for="dob">Date of Birth: </label><input type="date" id="dob" />
+          </td> -->
+        </tr>
+        <tr>
+          <td colspan="5">
+            <!-- address  2 inputs( make it two parts)   -->
+            <label for="add">Address: &nbsp;&nbsp;</label><input type="text" name="" id="add" size="196" />
+            <pre>        &nbsp; <input type="text" name="add" id="" /> <input type="text" name="" id="add" size="169" /></pre>
+            <label for="pin">Pin-Code</label><input type="text" id="pin" />
+
+
+            <tr >
+              <td colspan="4">
+                <hr>
+              </td>
+            </tr>
+
+
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <!-- state dropdown -->
+            <label for="state">Choose your state : </label><select name="" id="state">
+              <option value="" hidden>--choose option</option>
+              <option value="">Andhra Pradesh</option>
+              <option value="">Arunachal Pradesh</option>
+              <option value="">Assam</option>
+              <option value="">Bihar</option>
+              <option value="">Chhattisgarh</option>
+              <option value="">Goa</option>
+              <option value="">Gujarat</option>
+              <option value="">Haryana</option>
+              <option value="">Himachal Pradesh</option>
+              <option value="">Jharkhand</option>
+              <option value="">Karnataka</option>
+              <option value="">Kerala</option>
+              <option value="">Madhya Pradesh</option>
+              <option value="">Maharashtra</option>
+              <option value="">Manipur</option>
+              <option value="">Meghalaya</option>
+              <option value="">Mizoram</option>
+              <option value="">Nagaland</option>
+              <option value="">Odisha</option>
+              <option value="">Punjab</option>
+              <option value="">Rajasthan</option>
+              <option value="">Sikkim</option>
+              <option value="">Tamil Nadu</option>
+              <option value="">Telangana</option>
+              <option value="">Tripura</option>
+              <option value="">Uttar Pradesh</option>
+              <option value="">Uttarakhand</option>
+              <option value="">West Bengal</option>
+            </select>
+          </td>
+          <td>
+            <!-- language checkbox (hindi, english, kannada, tamil, telugu etc) -->
+            Language :
+            <label for="lang">telugu </label><input type="checkbox" id="lang">
+            <label for="">tamil</label><input type="checkbox" id="lang" />
+            <label for="">Gujarati </label><input type="checkbox" id="lang" />
+            <label for="">Hindi </label><input type="checkbox" id="lang" />
+            <label for="">Kannada </label><input type="checkbox" id="lang" />
+          </td>
+          <td>
+            <!-- gender radio button--><label for="">Gender : </label>
+            <label for="">Male </label><input type="radio" name="gen" />
+            <label for="">Female </label><input type="radio" name="gen" />
+            <label for="">Other </label><input type="radio" name="gen" />
+          </td>
+          <td>
+            <!-- phone no. contact -->
+            <label for="phno">Phone No: </label><input type="text" id="phno" />
+          </td>
+          <tr >
+            <td colspan="4">
+              <hr>
+            </td>
+          </tr>
+        </tr>
+        <tr>
+          <td>
+            <!-- email -->
+            <label for="email">Email: </label><input type="text" id="email" />
+          </td>
+          <td>
+            <!-- set user name -->
+            <label for="uname">Set User Name: </label><input type="text" id="uname" />
+          </td>
+          <td>
+            <!-- set password -->
+            <label for="pass">Set Password: </label><input type="password" id="pass" />
+          </td>
+          <td>
+            <!-- confirm password -->
+            <label for="cpass">Confirm Password: </label><input type="password" id="cpass" />
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+
+
+  <form action="form_login.html">
+    <fieldset>
+
+      <legend>
+        <h1>EDUCATION DETAILS</h1>
+      </legend>
+      <table width="100%" height="100%" border="0">
+        <!-- education details -->
+        <!-- 1. highest qualification dropdown -->
+        <tr>
+          <td>
+
+            <label for="edu">Select Highest Qualification : </label><select name="" id="edu">
+              <option value="" hidden>--choose option</option>
+              <option value="">BA</option>
+              <option value="">BSc</option>
+              <option value="">BCom</option>
+              <option value="">BCA</option>
+              <option value="">BBA</option>
+              <option value="">BTech</option>
+              <option value="">BE</option>
+              <option value="">MBBS</option>
+              <option value="">BDS</option>
+              <option value="">BPharm</option>
+            </select>
+          </td>
+          <td>
+
+            <!-- 2. percentage -->
+            <label for="perc">Percentage : </label><input type="number" id="perc" />
+          </td>
+          <td>
+
+            <!-- 3. stream  radio button (o mech o civil) -->
+            <label for="">Select Stream : </label>
+            Mech<input type="radio" name="st" id="">
+            Civil<input type="radio" name="st" id="">
+            CS<input type="radio" name="st" id="">
+            IT<input type="radio" name="st" id="">
+            EEE<input type="radio" name="st" id="">
+            ECE<input type="radio" name="st" id="">
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>
+
+            <!-- 4. collage name -->
+            <label for="coll">Collage Name : </label><input size="25" type="text" id="coll" />
+
+          </td>
+
+          <td>
+
+            <!-- skills -->
+            <!-- make checkbox (python, ds, js, java, php, html, sql, css, django, react) -->
+            <label for="">Choose Skills:</label>
+            <input type="checkbox" name="" id="py" /> <label for="py">Python</label>
+            <input type="checkbox" name="" id="ja" /> <label for="ja">Java</label>
+            <input type="checkbox" name="" id="cs" /> <label for="cs">Css</label>
+            <input type="checkbox" name="" id="cs" /> <label for="cs">Html</label>
+            <input type="checkbox" name="" id="dj" /> <label for="dj">Django</label>
+            <input type="checkbox" name="" id="cs" />
+            <label for="cs">Java Script</label>
+            <input type="checkbox" name="" id="sq" /> <label for="sq">SQL</label>
+            <input type="checkbox" name="" id="ph" /> <label for="ph">PHP</label>
+            <input type="checkbox" name="" id="js" /> <label for="ph">JS</label>
+
+          </td>
+          <td>
+
+            <!-- preferred location (bangalore, chennia, pune, hyd, delhi)  -->
+            <label for="loc">Preferred Location : </label><select name="" id="loc">
+              <option value="" hidden>--choose option</option>
+              <option value="">Bangalore</option>
+              <option value="">Chennai</option>
+              <option value="">Pune</option>
+              <option value="">Hyderabad</option>
+              <option value="">Delhi</option>
+              <option value="">Mumbai</option>
+              <option value="">Kolkata</option>
+            </select>
+          </td>
+
+        </tr>
+
+        <tr>
+
+
+          <td>
+
+            <!-- upload resume  (upload : button)-->
+            <label for="">Upload Resume : </label><input type="file" name="" id="" />
+
+          </td>
+          <td colspan="3">
+            <!-- your comments big box input -->
+
+            <label for="">Your Comments : </label>
+            <pre><textarea  name="" id="" cols="140" rows="5"></textarea></pre>
+
+          </td>
+
+        </tr>
+
+        <tr>
+          <td>
+            <!-- check box for agree t&c (add required) -->
+
+            <input required type="checkbox" id="agree" /><label for="agree">Agree T&C</label>
+          </td>
+          <td>
+            <!-- summit button and cancel button -->
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+          </td>
+
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+
+</html>
