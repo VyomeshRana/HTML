@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Title Here</title>
+    <style>
+        body {
+            overflow: hidden; /* Prevent scrolling */
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+        
+        /* Set styles for the container */
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: linear-gradient(to bottom, rgb(245, 131, 2), white, white, green);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        /* Set styles for the chakra image */
+        .chakra img {
+            height: 180px;
+            animation: spin-wheel 7s infinite linear; /* Combine animation properties */
+        }
+        
+        /* Define the animation keyframes */
+        @keyframes spin-wheel {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="chakra">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/17/Ashoka_Chakra.svg" alt="Ashoka Chakra">
+        </div>
+    </div>
+</body>
+</html>

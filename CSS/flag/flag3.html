@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 720px;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Center horizontally */
+            align-items: center; /* Center vertically */
+        }
+        .lg2 {
+            background-image: linear-gradient(to bottom, rgb(245, 131, 2), white, white, green);
+        }
+     
+        .wheel {
+            height: 150px;
+            width: 150px;
+            border: 7px solid darkblue;
+            border-radius: 100%;
+            position: relative;
+        }
+        
+        .wheel .line {
+            height: 100%;
+            width: 5px;
+            display: inline-block;
+            position: absolute;
+            left: 50%;
+            background: darkblue;
+        }
+        
+        .line:nth-child(1) {
+            transform: rotate(15deg)
+        }
+        
+        .line:nth-child(2) {
+            transform: rotate(30deg)
+        }
+        
+        .line:nth-child(3) {
+            transform: rotate(45deg)
+        }
+        
+        .line:nth-child(4) {
+            transform: rotate(60deg)
+        }
+        
+        .line:nth-child(5) {
+            transform: rotate(75deg)
+        }
+        
+        .line:nth-child(6) {
+            transform: rotate(90deg)
+        }
+        
+        .line:nth-child(7) {
+            transform: rotate(105deg)
+        }
+        
+        .line:nth-child(8) {
+            transform: rotate(120deg)
+        }
+        
+        .line:nth-child(9) {
+            transform: rotate(135deg)
+        }
+        
+        .line:nth-child(10) {
+            transform: rotate(150deg)
+        }
+        
+        .line:nth-child(11) {
+            transform: rotate(165deg)
+        }
+        
+        
+        .line:nth-child(12) {
+            transform: rotate(180deg)
+        }
+        
+        .rot {
+            animation: rotateTable 5s linear infinite;
+        }
+        
+        @keyframes rotateTable {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="lg2">   
+        <table class="rot" border="0">
+            <tr>
+                <td>
+                    <div class="wheel">
+                        <span class="line"></span>
+                        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
