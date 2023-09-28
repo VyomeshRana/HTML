@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adjacent_sibling_selector</title>
+    <style>
+        .to h4+p{
+            color: brown;
+            font-size: 50px;
+            font-family: fantasy;
+        }
+        .to h1+h1{
+            color: rgb(50, 42, 165);
+            font-size: 50px;
+            font-family: fantasy;
+        }
+    </style>
+</head>
+<body>
+    <div class="to">
+
+        <h1> This is 1st</h1>
+        <h2> This is 2nd</h2>
+        <h3>This is 3rd</h3>
+        <h4>this is 4th</h4>
+        <p>this is para</p>
+        
+    </div>
+</body>
+</html>
