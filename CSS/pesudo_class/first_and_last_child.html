@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth child  (even, odd)</title>
+    <style>
+        h1:first-child{
+            color: blue;
+        }
+        h1:last-child{
+            color: rgb(237, 100, 182);   
+        }
+        h1:nth-child(3){
+            color: lawngreen;
+        }
+        h1:nth-child(even){
+            background: linear-gradient(rgb(63, 63, 6), rgb(17, 36, 119), purple, blue);
+            font-size: 40px;
+            background-size: cover;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+        h1:nth-child(odd){
+            background: linear-gradient(yellow, green, rgb(217, 8, 217), rgb(18, 124, 116));
+            font-size: 50px;
+            background-size: cover;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <h1>this is first child</h1>
+    <h1>this is second child</h1>
+    <h1>this is third child</h1>
+    <h1>this is forth child</h1>
+    <h1>this is fifth child</h1>
+    <h1>this is sixth child</h1>
+    <h1>this is seventh child</h1>
+    <h1>this is eighth child</h1>
+    <h1>this is ninth child</h1>
+    <h1>this is tenth child</h1>
+</body>
+</html>

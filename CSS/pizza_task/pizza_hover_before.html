@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(234, 88, 15);
+        }
+        .pizza{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 400px;
+            width: 400px;
+            background-color: #ffb10b;
+            border-radius: 50%;
+            /* box-shadow: 15px 15px 30px black; */
+            
+            
+        }
+        .pizza::before{
+            content: '';
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 360px;
+            width: 350px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            box-shadow: inset 0px 0px 10px 12px #ea5353;
+        }
+        .sclice{
+            position: absolute;
+            margin: 180px 180px;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+
+            height: 180px;
+            width: 180px;
+            background-color: #665b23;
+            border-bottom-right-radius: 100%;
+            box-shadow: inset -20px -20px 10px -14px #ea5353;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="pizza">
+        <div class="sclice"></div>
+    </div>
+
+</body>
+</html>

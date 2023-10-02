@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .main{
+            /* position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;  */
+
+            height: 600px;
+            width: 80%;
+            background-color: rgb(234, 159, 129);
+            border: 2px green solid; 
+            display: flex;
+            /* flex-direction: row-reverse; */
+            flex-direction: row;
+            /* flex-direction: column-reverse; */
+            /* align-items: center; */
+            /* justify-content: center; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            justify-content:space-around ;
+            flex-wrap: wrap;
+        }
+
+        .main .box{
+            height:100px;
+            width: 200px;
+        }
+        .box:nth-child(1){
+            background-color: blanchedalmond;
+        }
+        .box:nth-child(2){
+            background-color: rgb(234, 174, 82);
+        }
+        .box:nth-child(3){
+            background-color: rgb(154, 93, 2);
+        }
+        .box:nth-child(4){
+            background-color: rgb(128, 126, 123);
+        }
+        .box:nth-child(5){
+            background-color: rgb(107, 210, 117);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        
+        
+        <div class="box"> Box 1</div>
+        <div class="box"> Box 2</div>
+        <div class="box"> Box 3</div>
+        <div class="box"> Box 4</div>
+        <div class="box"> box 5</div>
+
+
+    </div>
+</body>
+</html>

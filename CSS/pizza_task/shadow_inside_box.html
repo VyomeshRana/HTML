@@ -5,17 +5,181 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        .box{
+        .full{
             height: 400px;
             width: 400px;
-            background-color: rgb(202, 145, 2);
-            margin: 100px 450px;
-            box-shadow: -20px -20px 8px -10px rgb(151, 91, 1) inset;
-            border-bottom-right-radius: 100%;
+            /* background-color: rgb(202, 145, 2); */
+            background-image: conic-gradient(#ffeb3b, #ffeb3b);
+            box-shadow: 2px 2px 5px 20px rgba(194, 118, 4, 0.897) inset,
+            2px 2px 5px 24px rgb(196, 0, 0) inset;
+            border-radius: 100%;
+            margin: 100px 550px;
+            
         }
+        .hidden1{
+            height: 400px;
+            width: 400px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 3%;
+            /* z-index: 1; */
+            margin: -300px 750px;
+
+        }
+        .half{
+            height: 200px;
+            width: 200px;
+            background-color: #ffeb3b;
+            margin: -400px 750px;
+            box-shadow: -20px -20px 5px -10px rgba(194, 118, 4, 0.897) inset,-20px -20px 5px -5px rgb(196, 0, 0) inset;
+            border-bottom-right-radius: 100%;
+            border-top-left-radius: 3%;
+            /* z-index: 20; */
+            
+        }
+        .pepperoni{
+            margin: 135px 740px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+
+            height: 30px;
+            width: 30px;
+            border-radius: 50%;
+            background-color: transparent;
+            box-shadow: 
+            -40px -50px 0 0 #ea5353,
+            -60px -140px 0 0 #ea5353,
+            -100px -100px 0 0 #ea5353,
+            -130px -40px 0 0 #ea5353,
+            40px -50px 0 0 #ea5353,
+            30px -140px 0 0 #ea5353,
+            100px -100px 0 0 #ea5353,
+            130px -40px 0 0 #ea5353,
+            -40px 50px 0 0 #ea5353,
+            -30px 140px 0 0 #ea5353,
+            -100px 100px 0 0 #ea5353,
+            -130px 40px 0 0 #ea5353,
+            40px  50px 0 0 #ea5353,
+            50px  140px 0 0 #ea5353,
+            100px 100px 0 0 #ea5353,
+            130px 40px 0 0 #ea5353;
+        }
+        
+        .basil{
+            margin: -160px 730px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+
+            /* rotate: 20deg; */
+
+
+            height: 25px;
+            width: 10px;
+            border-radius: 100%;
+            background-color: transparent;
+            box-shadow: 
+            -60px -50px 0 0 #4caf50,
+            -30px -140px 0 0 #4caf50,
+            -110px -100px 0 0 #4caf50,
+            -150px -40px 0 0 #4caf50,
+            40px -50px 0 0 #4caf50,
+            30px -140px 0 0 #4caf50,
+            100px -100px 0 0 #4caf50,
+            130px -40px 0 0 #4caf50,
+            -40px 60px 0 0 #4caf50,
+            -30px 140px 0 0 #4caf50,
+            -100px 100px 0 0 #4caf50,
+            -130px 40px 0 0 #4caf50,
+            50px  50px 0 0 #4caf50,
+            80px  140px 0 0 #4caf50,
+            90px 100px 0 0 #4caf50,
+            130px 40px 0 0 #4caf50;    
+        }
+        .pi{
+            margin: 120px 750px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+
+            height: 6px;
+            width: 6px;
+            border-radius: 100%;
+            background-color: transparent ;
+            box-shadow: -60px -50px 0 0 rgb(196, 0, 0),
+            -30px -140px 0 0 rgb(196, 0, 0),
+            -110px -100px 0 0 rgb(196, 0, 0),
+            -150px -40px 0 0 rgb(196, 0, 0),
+            40px -50px 0 0 rgb(196, 0, 0),
+            30px -140px 0 0 rgb(196, 0, 0),
+            100px -100px 0 0 rgb(196, 0, 0),
+            130px -40px 0 0 rgb(196, 0, 0),
+            -40px 60px 0 0 rgb(196, 0, 0),
+            -30px 140px 0 0 rgb(196, 0, 0),
+            -100px 100px 0 0 rgb(196, 0, 0),
+            -130px 40px 0 0 rgb(196, 0, 0),
+            50px  50px 0 0 rgb(196, 0, 0),
+            80px  140px 0 0 rgb(196, 0, 0),
+            90px 100px 0 0 rgb(196, 0, 0),
+            130px 40px 0 0 rgb(196, 0, 0)
+        }
+        .lo{
+            margin: -80px 750px;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            z-index: 1;
+
+            height: 2px;
+            width: 4px;
+            border-radius: 100%;
+            background-color: transparent ;
+            box-shadow: -60px -50px 0 0 rgb(26, 21, 21),
+            -30px -140px 0 0 rgb(36, 34, 34),
+            -110px -100px 0 0 rgb(22, 20, 20),
+            -150px -40px 0 0 rgb(196, 0, 0),
+            40px -50px 0 0 rgb(31, 27, 27),
+            30px -140px 0 0 rgb(72, 57, 57),
+            100px -100px 0 0 rgb(55, 47, 47),
+            130px -40px 0 0 rgb(25, 23, 23),
+            -40px 60px 0 0 rgb(18, 16, 16),
+            -30px 140px 0 0 rgb(31, 26, 26),
+            -100px 100px 0 0 rgb(37, 21, 21),
+            -130px 40px 0 0 rgb(53, 48, 48),
+            50px  50px 0 0 rgb(57, 43, 43),
+            80px  140px 0 0 rgb(62, 33, 33),
+            90px 100px 0 0 rgb(75, 66, 66),
+            130px 40px 0 0 rgb(32, 25, 25)
+        }
+        .half::after:hover{
+            height: 200px;
+            width: 200px;
+            background-color: #ffeb3b;
+            margin: -390px 770px;
+            box-shadow: -20px -20px 5px -10px rgba(194, 118, 4, 0.897) inset,-20px -20px 5px -5px rgb(196, 0, 0) inset;
+            border-bottom-right-radius: 100%;
+            border-top-left-radius: 3%;
     </style>
 </head>
 <body>
-    <div class="box"></div>
+    <div class="full"></div>
+    
+    <div class="hidden1"></div>
+    <div class="half"></div>
+    <br><br>
+    <div class="pepperoni"></div>
+    
+    <div class="basil"></div>
+    <div class="pi"></div>
+    <div class="lo"></div>
+    
+
+    
+    
 </body>
 </html>
