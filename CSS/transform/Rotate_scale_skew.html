@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p{
+            font-family: fantasy;
+            font-size: 50px;
+            position: absolute;
+            top: 200px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+        p::first-letter{
+            content: 'PY';
+            font-family: fantasy;
+            color: red;
+        } */
+        @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fuggles&family=Pixelify+Sans:wght@500&display=swap');
+
+
+        body{
+            background-color: wheat;
+        }
+        .container{
+            
+            position: absolute;
+            top: 10%;
+            left: 30%;
+            /* transform: translate(-50%, -50%); */
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            
+            height: 600px;
+            width: 600px;
+
+            background-image: linear-gradient(to right ,#4DA0B0,#D39D38);
+            border-radius: 20%;
+
+            box-shadow: 2px 2px 10px 10px black inset;   
+        }
+        h1{
+            font-size: 80px;
+            font-family: 'Pixelify Sans', cursive;
+        }
+        h2{
+            font-size: 40px;
+            font-family: fantasy;
+        }
+        *{
+            margin: 0;
+        }
+        span{
+            color: red;
+        }
+        .container:hover{
+            /* transform: rotate(90deg); */
+            /* transform: rotateZ(360deg) rotateY(360deg) rotateX(360deg); */
+
+            /* transform: scaleX(0.5); */
+            /* transform: scaleY(1.5); */
+
+            /* transform:  scale(1.2) rotateX(360deg) ; */
+
+            /* transform: skew(10deg) rotateY(360deg) scale(0.6); */
+
+            transform: translate(80px);
+
+
+            transition: all 3s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span>PY</span>spider</h1>
+        <h2>basavanagudi</h2>
+    </div>
+</body>
+</html>

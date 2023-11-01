@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 90px;
+            height: 90px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        img:nth-child(1){
+            animation: run1 4s ease infinite alternate;
+            position: relative;
+        }
+        img:nth-child(2){
+            animation: run2 4s ease-in infinite alternate;
+            position: relative;
+        }
+        img:nth-child(3){
+            animation: run2 4s ease-out infinite alternate;
+            position: relative;
+        }
+        img:nth-child(4){
+            animation: run2 4s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        @keyframes run1 {
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0;
+                left: 95%;
+            }
+            
+        }
+        
+        @keyframes run2 {
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0;
+                left: 95%;
+            }
+            
+        }
+
+        
+        @keyframes run3 {
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0;
+                left: 95%;
+            }
+            
+        }
+
+        
+        @keyframes run4 {
+            from{
+                top: 0;
+                left: 0;
+            }
+            to{
+                top: 0;
+                left: 95%;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="Run.gif" alt="">
+        <img src="Run.gif" alt="">
+        <img src="Run.gif" alt="">
+        <img src="Run.gif" alt="">
+
+    </div>
+</body>
+</html>

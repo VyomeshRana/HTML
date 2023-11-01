@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            /* position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0; */
+
+            height: 400px;
+            width: 400px;
+            border: 4px black solid;
+            background-color: tomato;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            /* transition properties */
+
+            /* transition-property: border , background-color;
+            transition-duration: 3s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+
+            /* same pro in one line */
+
+            transition: all 3s ease-in;
+        }
+        .box:hover{
+            height: 700px;
+            width: 700px;
+            border: 4px rgb(238, 12, 193) solid;
+
+            background-color: rgb(76, 240, 142);
+
+            font-size: 40px;
+            color: rgb(165, 102, 20);
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1>BOX</h1>
+    </div>
+</body>
+</html>

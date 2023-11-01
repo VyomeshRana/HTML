@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: steelblue;
+            border: 4px black solid;
+
+            position: absolute;
+
+            animation: move 5s ease-in infinite alternate ;
+        }
+
+        @keyframes move {
+            0%{
+                top: 0;
+                left: 0;
+            }
+            25%{
+                top: 0;
+                left:  93%;
+                transform: rotate(90deg);
+                background-color: tomato;
+                /* border-radius: 50%; */
+            }
+            50%{
+                top:  85%;
+                left: 93%;
+                transform: rotate(-180deg);
+
+            }
+            75%{
+                top: 86%;
+                left: 0;
+                transform: rotate(-270deg);
+            }
+            100%{
+                top: 0;
+                left: 0;
+                transform: rotate(-360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .loader{
+            height: 100px;
+            width: 100px;
+            background-color: teal;
+
+            /* animation pro */
+            /* animation-duration: Loader;
+            animation-duration: 3s;
+            animation-timing-function: ease-in;
+
+            animation-iteration-count: infinite; */
+            
+            /* animation in one line */
+
+            animation: Loader 3s ease-in infinite 1s;
+
+        }
+            @keyframes Loader {
+                from{
+                    width: 100px;
+                }
+                to{
+                    width: 600px;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="loader"></div>
+</body>
+</html>

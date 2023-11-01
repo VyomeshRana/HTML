@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            background-color: rgb(174, 197, 197);
+            height: 800px;
+            width: 90%;
+            display: flex;
+        }
+        .flex_items{
+            margin: 10px;
+            height: 200px;
+            width: 200px;
+            border: 6px rgb(14, 15, 14) solid;
+            background-color: rgb(201, 184, 28);
+        }
+        .container div:nth-child(2){
+            background-color: blue;
+            position: fixed;
+            left: 100px;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <div class="flex_items">1</div>
+        <div class="flex_items">2</div>
+        <div class="flex_items">3</div>
+        <div class="flex_items">4</div>
+
+
+    </div>
+</body>
+</html>

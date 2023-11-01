@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+      .road{
+        height: 170px;
+        width: 100%;
+        /* margin-top: 10px; */
+        background-color: #3e3d3d;
+        border: 2px black solid;
+        position: absolute;
+        bottom: 0;
+        border-left: 0;
+        border-right: 0;
+      }
+      .roadlines{
+        height: 10px;
+        width: 100px;
+        position: absolute;
+        top: 85px;
+        left: 10px;
+        background-color: white;
+        box-shadow:
+        -400px 0px 0px white,
+        -200px 0px 0px white,
+         0px 0px 0px white,
+        200px 0px 0px white,
+        400px 0px 0px white,
+        600px 0px 0px white,
+        800px 0px 0px white,
+        1000px 0px 0px white,
+        1200px 0px 0px white,
+        1400px 0px 0px white,
+        1600px 0px 0px white;
+
+        animation: Roadlines 1s linear  infinite reverse;
+      }
+
+      @keyframes Roadlines {
+        0%{
+            transform: translateX(100px);
+        }
+
+        100%{
+            /* box-shadow: -100px 0px 0px white; */
+            transform: translateX(500px);
+            /* transition: all 5s ease-out; */
+        }
+      }
+        .car{
+          position: absolute;
+          display: flex;
+          flex-direction: column;
+          bottom: 45%;
+          animation: Car 4s linear infinite alternate;
+        }
+
+        @keyframes Car {
+            0%{
+              transform: translateX(0px);
+            } 
+            20%{
+                transform: translateX(200px);
+            }
+            100%{
+              transform: translateX(700px);
+            }         
+        }
+        .cartop{
+            height: 100px;
+            width: 250px;
+            border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            background-color:   rgb(231, 7, 243);
+            position: relative;
+            display: flex;  
+            left: 10.5px;
+            border-bottom: 1.5px black solid;
+            border-top: 3px black solid;
+            border-left: 3px black solid;
+            border-right: 3px black solid;
+        }
+        .window:nth-child(1){
+            height: 80%;
+            width: 50%;
+            border-top-left-radius: 100%;
+            background-image: linear-gradient(rgb(86, 86, 89), white);
+            display: inline;
+            position: relative;
+            top: 6px;
+            left:6px;
+            border: 3px black solid;
+        }
+        
+        .window:nth-child(2){
+            height: 80%;
+            width: 42%;
+            border-top-right-radius: 100%;
+            background-image: linear-gradient(rgb(78, 78, 79), white);
+            display: inline;
+            position: relative;
+            top: 6px;
+            left: 10px;
+            border: 3px black solid;
+        }
+        .carmid{
+            height: 70px;
+            width: 350px;
+            background-color: rgb(143, 3, 224);
+            margin-left: 10px;
+            /* border-top-right-radius: 50px; */
+            border-end-start-radius: 10px 400px;
+            border-start-start-radius: 10px 400px;
+            border-top-right-radius: 650px;
+            border-bottom: 1.5px black solid;
+            border-top: 1.5px black solid;
+            border-left: 3px black solid;
+            border-right: 3px black solid;
+        }
+        .carbottom{
+            height: 20px;
+            width: 380px;
+            background-color: rgb(87, 87, 87);
+            border-radius: 7px;
+            margin-left: 3px;
+            border-bottom: 3px black solid;
+            border-top: 1.5px black solid;
+            border-left: 3px black solid;
+            border-right: 3px black solid;
+            display: flex;
+            flex-direction: row;
+
+        }
+        .wheel:nth-child(1){
+            height: 70px;
+            width: 70px;
+            background-image: conic-gradient(
+                black 0deg 20deg,transparent 20deg 40deg,
+                black 40deg  60deg ,transparent 60deg  80deg ,
+                black 80deg  100deg,transparent 100deg 120deg,
+                black 120deg 140deg,transparent 140deg 160deg,
+                black 160deg 180deg,transparent 180deg 200deg,
+                black 200deg 220deg,transparent 220deg 240deg,
+                black 240deg 260deg,transparent 260deg 280deg,
+                black 280deg 300deg,transparent 300deg 320deg,
+                black 320deg 340deg,transparent 340deg 360deg
+                ); 
+            position: relative;
+            left: 12%;
+            top: -15px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: wheel 2s linear infinite;
+            box-shadow: 0px 0px 0px 3px rgb(151, 143, 143) inset;
+            border: 10px black solid;
+            background-color: rgb(151, 143, 143);
+        }
+        @keyframes wheel {
+            to{
+                rotate:360deg;
+                /* transform: translate(700px); */
+            }
+            from{
+            }
+        }
+        .wheel:nth-child(2){
+            height: 70px;
+            width: 70px;
+            background-image: conic-gradient(
+                black 0deg 20deg,transparent 20deg 40deg,
+                black 40deg  60deg ,transparent 60deg  80deg ,
+                black 80deg  100deg,transparent 100deg 120deg,
+                black 120deg 140deg,transparent 140deg 160deg,
+                black 160deg 180deg,transparent 180deg 200deg,
+                black 200deg 220deg,transparent 220deg 240deg,
+                black 240deg 260deg,transparent 260deg 280deg,
+                black 280deg 300deg,transparent 300deg 320deg,
+                black 320deg 340deg,transparent 340deg 360deg
+                );
+            position: relative;
+            left: 170px;
+            top: -15px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: wheel 2s linear infinite;
+            box-shadow: 0px 0px 0px 3px rgb(151, 143, 143) inset;
+            border: 10px black solid;
+            background-color: rgb(151, 143, 143);
+        }
+        .smallwheel{
+            height: 35px;
+            width: 35px;
+            box-shadow: 0px 0px 0px 3px black inset;
+            background-color: rgb(151, 143, 143);
+            border: 5px rgb(151, 143, 143) solid;
+            border-radius: 100%;
+        }
+        .light{
+            height: 20px;
+            width: 12px;
+            position: relative;
+            right: 15px;
+            top: 25px;
+            background-color: yellow;
+            border-top-left-radius:100%;
+            border-bottom-left-radius:100%;
+            border-left: 4px black solid;
+            border-top: 2px black solid;
+            border-bottom: 2px black solid;
+        }
+        .light1{
+            height: 20px;
+            width: 12px;
+            position: relative;
+            top: 8px;
+            left: 320px;
+            background-color: yellow;
+            border-top-right-radius:100%;
+            border-bottom-right-radius:100%;
+            border-right: 4px black solid;
+            border-top: 2px black solid;
+            border-bottom: 2px black solid;
+
+            box-shadow: 100px 90px 90px 90px wheat;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="road">
+      <div class="roadlines"></div>
+        <div class="car">
+          <div class="cartop">
+              <div class="window"></div>
+              <div class="window"></div>
+          </div>
+          <div class="carmid">
+                <div class="light"></div>
+                <div class="light1"></div>
+          </div>
+          <div class="carbottom">
+              <div class="wheel">
+                  <div class="smallwheel"></div>
+              </div>
+              <div class="wheel">
+                  <div class="smallwheel"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- building -->
+</body>
+</html>

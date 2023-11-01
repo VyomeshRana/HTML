@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .road{
+            position: absolute;
+            bottom: 0;
+            height: 200px;
+            width: 100%;
+
+            background-color: rgb(63, 60, 60);
+            border: 6px black dashed;
+            border-left: 0;
+            border-right: 0;
+
+        }
+        .divider{
+            position: relative;
+            top: 46%;
+            width: 100px;
+            height: 10px;
+            background-color: aliceblue;
+
+            box-shadow: 200px 0px 0px aliceblue,
+            -600px 0px 0px aliceblue,
+            -400px 0px 0px aliceblue,
+            -200px 0px 0px aliceblue,
+            0px 0px 0px aliceblue,
+            400px 0px 0px aliceblue,
+            600px 0px 0px aliceblue,
+            800px 0px 0px aliceblue,
+            1000px 0px 0px aliceblue,
+            1200px 0px 0px aliceblue,
+            1400px 0px 0px aliceblue,
+            1600px 0px 0px aliceblue,
+            1800px 0px 0px aliceblue,
+            2000px 0px 0px aliceblue
+            ;
+
+
+            animation: lane 0.8s linear infinite reverse;
+        }
+
+        @keyframes lane {
+            0%{
+                transform: translateX(100px);
+            }
+            25%{
+                transform: translateX(200px);
+            }
+            50%{
+                transform: translateX(300px);
+            }
+            75%{
+                transform: translateX(400px);
+            }
+            100%{
+                transform: translateX(500px);
+            }
+        }
+
+
+        .car{
+           
+            
+            height: 700px;
+            width: 100%;
+            background-color: aqua;
+            
+        }
+        .top{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .top .car_top_left{
+            width:300px;
+            height: 140px;
+
+            background-color: rgb(166, 234, 135);
+            border-top: 1px black solid;
+            border-top-left-radius: 80%;
+
+            
+        }
+        .car_top_right{           
+            width: 150px;
+            height: 140px;
+
+            background-color: rgb(106, 89, 89);
+            border: 1px black solid;
+            border-top-right-radius: 80% ;
+        }
+        .car_bottom{
+            width: 600px;
+            height: 100px;
+            /* border-left:   ; */
+            border-top-left-radius: 10%;
+            /* border-bottom-left-radius: 20px; */
+
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+
+            
+
+            background-color: rgb(92, 75, 75);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- road -->
+    <div class="road">
+        <div class="divider"></div>
+    </div>
+
+    <!-- car -->
+    <div class="car">
+        <div class="top">
+            <div class="car_top_left"></div>
+            <div class="car_top_right"></div>
+        </div>
+        <div class="car_bottom"></div>
+        <div class="car_wheel"></div>
+    </div>
+</body>
+</html>
