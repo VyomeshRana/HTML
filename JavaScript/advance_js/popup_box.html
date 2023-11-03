@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<b>
+    <h1>Pop up Box</h1>
+    <input type="button" value="Click here" onclick="btn()">
+    <script>
+        function btn(){
+            alert("Welcom to Javascript")
+        }
+        function btnnum(){
+            alert(98989)
+        }
+        function btntextnum(){
+            alert("hi"+ 98989)
+        }
+        function btnnum(){
+            alert(98989)
+        }
+        function btnboolen(){
+            alert(true)
+        }
+        function btndate(){
+            alert(Date())
+        }
+        function doyou(){
+            confirm("do you want to LEAVE THIS PAGE ")
+        }
+
+    </script>
+    <input type="button" value="text" onclick="btntext()">
+    <input type="button" value="num" onclick="btnnum()">
+    <input type="button" value="text num" onclick="btntextnum()">
+    <input type="button" value="bool" onclick="btnboolen()">
+    <input type="button" value="date" onclick="btndate()">
+
+<!-- confirm -->
+    <br><br>
+    <button onclick="doyou()">Click here</b></button>
+
+
+    <!-- confirm -->
+    <button onclick="ssvdata()">save</button>
+    <h1 id="text"></h1>
+    <script>
+        function ssvdata(){
+            if (confirm("do you want to save data?")){
+                // alert("data saved")
+                // console.log("data saved")
+                document.getElementById("text").innerHTML = "data saved";
+            }
+            else{
+                // alert("data not saved")
+                // console.log("data not saved")
+                // window.confirm("data not saved")
+                document.getElementById("text").innerHTML = "data not saved";
+            }
+        }
+        
+    </script>
+    <br><br>
+    
+<!-- prompt -->
+
+    <button onclick="getData()">getData</button>
+    <h1 id = "dname"></h1>
+    <script>
+        function getData(){
+            let dataName = prompt("enter your name : ", 'pyspider').trim()
+            if(dataName == null || dataName ==""){
+                document.getElementById("dname").innerHTML = "u entered nothing"
+            }
+            else{
+                document.getElementById("dname").innerHTML = dataName
+            }
+        }
+    </script>
+</body>
+</html>
