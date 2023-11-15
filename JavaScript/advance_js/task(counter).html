@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 style="display: inline;">Count = <h1 style="display: inline;" id="num">0</h1></h1>
+    <hr>
+    <button onclick="start()">Start</button>
+    <button  onclick="stop1()">Stop</button>
+    <button  onclick="reset1()">Reset</button>
+    <hr>
+
+
+    <script>
+        let go;
+        let count = 0
+        function start(){
+        go = setInterval(() => {
+            num.innerHTML = count++
+        }, 1000)
+        }
+
+        function reset1(){
+            num.innerHTML = 0
+            count = 0
+            clearInterval(go)
+        }
+
+        function stop1(){
+            clearInterval(go)
+        }
+        
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>choose gender</h1>
+    <input type="radio" name="gen">male
+    <input type="radio" name="gen">female
+    <input type="radio" name="gen">other
+<hr>
+    <button onclick="countGender()">Count</button>
+    <div id="display"></div>
+
+    <script>
+        function countGender(){
+            let count = document.getElementsByName("gen").length
+            console.log(count)
+            document.getElementById("display").innerHTML = `NO OF GENDER ==> ${count}`
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- onclick
+    ondbclick
+    onmouseover
+    onmouseout -->
+    <h1 id="changeT" onmouseover="style.color = 'red'">Who are YoU!</h1>
+    <button onclick="changeTxt()" ondblclick="changeSize()" >change</button>
+
+    <script>
+        // document.getElementById("changeT").style.display ="inline"
+        changeT.style.display = "inline"
+        function changeTxt(){
+            document.getElementById("changeT").innerHTML = "I'am DeViL JS"
+        }
+        function changeSize(){
+            document.getElementById("changeT").innerHTML ="Its me again with Diff size"
+        }
+        function changeColor(){
+            document.getElementById("changeT").style.color= "red"
+        }
+        newTxt.style.display ='inline'
+    </script>
+
+    <hr>
+
+    <h2 id="newTxt" onmouseout="style.color ='green'" >Devil here again!</h2>
+    
+</body>
+</html>

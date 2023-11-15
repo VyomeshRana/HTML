@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text">this is h1</h1>
+    <h2 class="text">this is h2</h2>
+    <p class="text">this is paragraph</p>
+    <h3 class="text">this is h3</h3>
+    <h4 class="text">this is h4</h4>
+    <div class="text">this is a div</div>
+
+    <button onclick="changeColor()">change color</button>
+    <button onclick="changeTo()">Red or Green</button>
+
+<!-- odd red , green -->
+    <script>
+        function changeColor(){
+            let element = document.getElementsByClassName("text")
+            for(i = 0;i<=element.length-1;i++){
+                // console.log(element[i].textContent)
+                element[i].style.color="red"
+            }
+        }
+        function changeTo(){
+            let element2 = document.getElementsByClassName("text")
+            for(i=0;i<=element2.length -1 ;i++){
+                if (i%2==0){
+                    element2[i].style.color = "red"
+                }
+                else{
+                    element2[i].style.color = "green"
+                }
+            }
+        }
+        
+    </script>
+</body>
+</html>

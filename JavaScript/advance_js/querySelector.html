@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: fit-content;
+            width: fit-content;
+            border: 2px solid;
+            margin: 30px;
+            display: flex;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- #box$*2 -->
+    <div id="box1">
+        <P>Lorem ipsum dolor sit amet.</P>
+        <P>Lorem ipsum dolor sit amet.</P>
+        <P>Lorem ipsum dolor sit amet.</P>
+        <P>Lorem ipsum dolor sit amet.</P>
+    </div>
+
+    <div id="box2">
+        <P>Lorem ipsum dolor sit amet.</P>
+        <P>Lorem ipsum dolor sit amet.</P>
+        <P>Lorem ipsum dolor sit amet.</P>
+        <P>Lorem ipsum dolor sit amet.</P>
+    </div>
+
+    <button onclick="selectEle()">fuxk</button>
+
+    <script>
+        function selectEle(){
+            let boxOne = document.getElementById("box1")
+            boxOne.querySelector("p").style.textShadow = "2px 2px 1px black"
+            boxOne.querySelector("p").style.color = "green"
+            boxOne.querySelector("p").style.fontSize = "50px"
+
+
+            let boxTwo = document.getElementById("box2")
+            boxTwo.querySelector("p").style.textShadow = "2px 2px 1px green"
+            boxTwo.querySelector("p").style.color = "black"
+            boxTwo.querySelector("p").style.fontSize = "50px"
+
+            let boxTwoAll = document.getElementById("box2")
+            let allP =  boxTwoAll.querySelectorAll("p")
+            for(i=0;i<allP.length;i++)
+            {
+                allP[i].style.fontSize = "50px"
+                allP[i].style.transition = "all 0.5s ease-in"
+                allP[i].style.writingMode = "vertical-rl"
+            }
+        }
+    </script>
+</body>
+</html>

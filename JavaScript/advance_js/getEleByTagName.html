@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Getting Sleepy</h1>
+    <h2>You had lots of chicken rice / egg rice</h2>
+    <h3>Control your self</h3>
+    <h1>i will not leave you</h1>
+    <h3>UNtill end of you time</h3>
+    <h1>Lorem, ipsum.</h1>
+    <h1>Lorem, ipsum.</h1>
+    <span>Lorem ipsum dolor sit.</span>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <h1>Lorem, ipsum.</h1>
+    <span>Lorem ipsum dolor sit.</span>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <div>Lorem ipsum dolor sit amet.</div>
+    <br>
+    <hr>
+
+    <button onclick="countTag()">count</button>
+    <div id="display"></div>
+    <div id="displa"></div>
+    <div id="displ"></div>
+    <div id="disp"></div>
+    <div id="dis"></div>
+
+
+    <script>
+        function countTag(){
+            
+            let lsit1 = [counth2 = document.getElementsByTagName("h2").length,
+            counth3 = document.getElementsByTagName("h3").length,
+            countspan = document.getElementsByTagName("span").length,
+            countdiv = document.getElementsByTagName("div").length,
+            count = document.getElementsByTagName("h1").length]
+            
+            console.log(lsit1)
+            // document.getElementById("display").innerHTML =`no of h1 == ${count}`
+            // document.getElementById("displa").innerHTML =`no of h2 == ${counth2}`
+            // document.getElementById("displ").innerHTML =`no of h3 == ${counth3}`
+            // document.getElementById("disp").innerHTML =`no of span == ${countspan}`
+            document.getElementById("dis").innerHTML =`no of div == ${countdiv} <br> no of span == ${countspan} <br>
+            no of h3 == ${counth3} <br>no of h2 == ${counth2} <br>no of h1 == ${count} `
+
+
+
+        }
+    </script>
+
+</body>
+</html>

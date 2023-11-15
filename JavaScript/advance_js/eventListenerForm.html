@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- form -  onsubmit is form event handler -->
+    <form action="" id="alr">
+        user name : <input type="text" name="" id="inpE"><br><br>
+        password : <input type="text" name="" id="">
+        <br><br>
+        <button type="submit" id="">Submit</button>
+    </form>
+    
+    <script>
+        inpE.addEventListener('keyup',upe)
+        function upe(){
+            inpE.value = inpE.value.toUpperCase()
+        }
+        document.getElementById("alr").addEventListener('submit',()=>{
+            alert('form submitted')
+        })
+        
+        
+    </script>
+</body>
+</html>
