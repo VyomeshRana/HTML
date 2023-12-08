@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> weather Report</h1>
+    Enter City name: <input type="text" name="" id="cityName"><br><br>
+    <button onclick="weatherRepo()">Get here</button>
+    <p id="wet"> </p>
+    <script>
+    function weatherRepo(){
+
+        let city = document.getElementById('cityName').value
+        let url =   
+        let fetched_url = fetch(url)
+        
+        fetched_url.then((Response)=>{
+            return Response.json()
+        }).then((data)=>{
+            for(i in data){
+                wet.innerHTML= `temperature: ${data.temperature} <br> wind: ${data.wind} <br> description: ${data.description}`
+            }
+            console.log(data)
+        }).catch((err)=>{
+            wet.innerHTML = "something went Wrong"
+        })
+        // document.getElementById('wet').innerHTML = city;
+    }    
+    </script>
+
+    
+</body>
+</html>

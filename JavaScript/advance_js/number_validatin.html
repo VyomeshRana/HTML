@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type ='text'],p{
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    Enter Number : <input type="text" name="" id="Numb"><p id="err"></p> <br><br>
+    <button onclick="numValid()">Validate</button>
+    
+    <h1 id="suc"></h1>
+
+
+    <script>
+        function numValid(){
+            let number = Numb.value
+
+            if(number ==='' || number === null){
+                Numb.style.border = "3px red solid"
+                Numb.style.borderRadius = '20px'
+                err.innerHTML = "field should not be empty"
+                err.style.color = 'red'
+                // suc.innerHTML = ''
+                suc.style.display = 'none'
+            }else if(isNaN(number)){
+                err.innerHTML = "Please enter a valid number"
+                err.style.color = 'red'
+                
+            }
+            else{
+                suc.innerHTML = 'validation is correct'
+                suc.style.color = 'green'
+                // err.innerHTML = ''
+                Numb.style.border = "3px green solid"
+                Numb.style.borderRadius = '20px'
+                err.style.display = 'none'
+            }
+        }
+    </script>
+</body>
+</html>

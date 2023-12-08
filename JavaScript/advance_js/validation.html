@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* {
+            border: 1px black solid; 
+            width: 250px;
+            height: 400px;
+
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+
+            
+        } */
+
+    </style>
+</head>
+<body>
+    <div id="lo">
+
+        
+        <form action="https://pyspiders.com/" id="form-form">
+            
+            User Name : <input type="text" name="" id="uName"> <br><br>
+            Password : <input type="password" name="" id="pName"><br><br>
+            confirm password : <input type="password" name="" id="cPass"><br><br>
+            <input type="checkbox" name="" id="showPass" onclick="Hide()"><label for="showPass" id="">Show passWord</label><br><br>
+            <button onclick="return UserNameValidate()" id="btn"> Validate </button>
+
+        </form>
+    
+    </div>
+    <script>
+        
+        function UserNameValidate(){
+
+            let userName = uName.value
+            let passWord = pName.value
+            let confPass = cPass.value 
+            console.log(userName)
+            if(userName === "" || userName === null){
+                // alert('Field Should Not Be Empty')
+                uName.style.border = '2px red solid'
+                return false
+            } 
+            else if(userName[0] ===' ' & pName[0] ===' '){
+                // alert('space is not accepted')
+                uName.style.border = '2px red solid'
+                return false
+            }
+            else if(userName !== 'Pyspiders' & passWord !=='pass' ){
+                uName.style.border = '2px red solid'
+                // alert('Incorrect user name')
+                return false
+            } 
+            
+            // password
+
+            else if (passWord === '' || passWord ===null){
+                pName.style.border ='2px red solid'
+                return false
+            }
+            else if (passWord.length <=6){
+                pName.style.border ='2px red solid'
+                return false
+            }
+            else if (passWord !== 'pysp123'){
+                return false
+            }
+            else if( passWord === confPass){
+                confPass.style.border ='2px red solid'
+                return true
+            }
+            else {
+                uName.style.border = '2px green solid'
+                pName.style.border = '2px green solid'
+                // alert('validation is successful')
+                return true
+            }
+        }
+
+        function Hide(){
+            let x = document.getElementById('cPass')
+            // if(x.type === 'password'){
+            //     x.type = 'text'
+            // }
+            // else{
+            //     x.type ='password'
+            // }
+
+            x.type === 'password' ? x.type = 'text': x.type = 'password'
+        }
+        
+
+    </script>
+</body>
+</html>

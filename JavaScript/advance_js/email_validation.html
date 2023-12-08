@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type ='email']>p{
+
+        }
+    </style>
+</head>
+<body>
+    
+    Email : <input type="text" name="" id="mInp"> <p id="err"></p>
+    <button onclick="validMail()">validate</button>
+
+    <p id="valid"></p>
+
+    <script>
+        function validMail(){
+            let mail = mInp.value
+            let msg 
+            if(mail === '' || mail === null){
+                mInp.style.border = '3px red solid'
+                err.style.color = 'red'
+                mag = 'flied should not be empty'
+            }
+            else if(mail.indexOf('@') <= 0){
+                mInp.style.border = '3px red solid'
+                err.style.color = 'red'
+                msg = 'Mail is not Valid : @'
+            }else if((mail.charAt(mail.length - 4) !='.' ) && (mail.charAt(mail.length -3) !='.')){
+                mInp.style.border = '3px red solid'
+                err.style.color = 'red'
+                msg = 'Mail id not correct '
+            }
+            // this not good for interview
+            else if((mail.endsWith("gmail.com") !== true) || (mail.endsWith("gov.co.in") !== true)){
+                mInp.style.border = '3px red solid'
+                err.style.color = 'red'
+                msg = 'Mail id not correct '
+            }
+            else{
+                mInp.style.border = '3px green solid'
+                valid.style.color = 'green'
+                valid.innerHTML = 'Mail is Valid'
+                msg =""
+        }
+        err.innerHTML = msg
+    }
+    </script>
+</body>
+</html>

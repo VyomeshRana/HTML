@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            box-sizing: 0;
+            background-image: url("pexels-cats-coming-707582.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        div.container{
+            width: 400px;
+            height: 400px;
+            border: 1px rgba(0, 0, 0, 0.233) solid;
+
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* PUT IN CENTER */
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+
+            background-color: rgba(137, 221, 164, 0.422);
+
+            bo
+
+            
+        }
+        div.timer {
+            display: flex;
+            /* border: 1px black solid; */
+        }
+        button{
+            width: 70px;
+            border-radius: 20%;
+        }
+        button:hover{
+            font-size: large;
+            background-color: rgb(176, 109, 238);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="heading">
+        <h1>STOP WATCH</h1>
+    </div>
+    <div class="timer">
+        <h1 id="numH">00:</h1>
+        <h1 id="numM">00:</h1>
+        <h1 id="num">00</h1>
+    </div>
+    
+    
+    <div class="btn-all">
+        <button onclick="start()">Start</button>
+        <button  onclick="stop1()">Stop</button>
+        <button  onclick="reset1()">Reset</button>
+    </div>
+    
+</div>    
+
+
+    <script>
+        let go;
+        let count = 0
+        let countM  = 0
+        let countH = 0 
+
+        function start(){
+            go = setInterval(function goSec(){ 
+                num.innerHTML = `${count++}`
+                if (count>59){
+                    count=0
+                    countM+=1
+                    numM.innerHTML = `${countM}:`
+                    if(countM>59){
+                        countM=0
+                        countH+=1
+                        numH.innerHTML = `${countH}:`
+                    }
+                }
+            },1000) 
+        }
+
+
+    function reset1(){
+            numH.innerHTML = `0${0}:`
+            numM.innerHTML = `0${0}:`
+            num.innerHTML = `0${0}`
+            clearInterval(go)
+    }
+
+    function stop1(){
+            clearInterval(go)
+    }
+        
+
+    </script>
+
+</body>
+</html>
