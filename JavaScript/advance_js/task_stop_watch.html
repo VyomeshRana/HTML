@@ -31,9 +31,6 @@
             right: 0;
 
             background-color: rgba(137, 221, 164, 0.422);
-
-            bo
-
             
         }
         div.timer {
@@ -59,7 +56,7 @@
     <div class="timer">
         <h1 id="numH">00:</h1>
         <h1 id="numM">00:</h1>
-        <h1 id="num">00</h1>
+        <h1 id="numS">00</h1>
     </div>
     
     
@@ -74,39 +71,48 @@
 
     <script>
         let go;
-        let count = 0
+        let tap = 0
+        let countS = 0
         let countM  = 0
-        let countH = 0 
-
+        let countH = 0
         function start(){
-            go = setInterval(function goSec(){ 
-                num.innerHTML = `${count++}`
-                if (count>59){
-                    count=0
-                    countM+=1
-                    numM.innerHTML = `${countM}:`
-                    if(countM>59){
-                        countM=0
-                        countH+=1
-                        numH.innerHTML = `${countH}:`
+            if (tap == 0){
+                go = setInterval(()=>{ 
+                    numS.innerHTML = `${countS++}`
+                    if (countS>59){
+                        countS=0
+                        countM+=1
+                        numM.innerHTML = `${countM}:`
+                        if(countM>59){
+                            countM=0
+                            countH+=1
+                            numH.innerHTML = `${countH}:`
+                        }
                     }
-                }
-            },1000) 
+                },1000) 
+            }
+            tap = 1
         }
 
 
     function reset1(){
             numH.innerHTML = `0${0}:`
             numM.innerHTML = `0${0}:`
-            num.innerHTML = `0${0}`
+            numS.innerHTML = `0${0}`
             clearInterval(go)
+            countS = 0
+            countM  = 0
+            countH = 0 
+            tap = 0
+            
     }
 
     function stop1(){
+        if(tap == 1){
             clearInterval(go)
+            tap = 0
+        }
     }
-        
-
     </script>
 
 </body>

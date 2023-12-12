@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <style>
+        body{
+            margin: 0;
+            padding: 0;
+            background-image: url("time_bg.jpg");
+            background-repeat: no-repeat;
+            height: 100vh;
+            width: 100%;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box{
+            height: 300px;
+            width: 350px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px black solid;
+            flex-direction: column;
+            background-color: rgba(251, 251, 251, 0.694);
+            
+        }
+        h2{
+            font-size: 30px;
+        }
+        .btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .btn button{
+            height: fit-content;
+            width: fit-content;
+            padding: 5px 25px;
+            background-color: white;
+            border: 2px black solid;
+            margin: 3px;
+        }
+    </style> -->
+</head>
+<body>
+    <div class="box">
+        <h2 style="display: inline;" id="Count">00:00:00</h2>
+        <br>
+        <br>
+        <div class="btn">
+            <button onclick="Timer_start()" >Start</button>
+            <button onclick="Timer_stop()">Stop</button>
+            <button onclick="Timer_reset()">Reset</button>
+        </div>
+    </div>
+    <script>
+        let time;
+        let one_click = 0;
+        let sec = 0
+        let Min = 0
+        let Hour = 0
+        function Timer_start(){
+        if (one_click==0){
+            time = setInterval(() => {
+                    if (sec == 60){
+                        sec = 0
+                        document.getElementById("Count").innerHTML = `${(Hour)}:${(Min++)}:${(sec++)}`
+                    }
+                    else if(Min == 60){
+                        Min = 0
+                        document.getElementById("Count").innerHTML = `${round(Hour++)}:${round(Min++)}:${round(sec++)}`
+                    }
+                    else{
+                        document.getElementById("Count").innerHTML = `${round(Hour)}:${round(Min)}:${round(sec++)}`
+                    }
+            }, 1000);
+            one_click=1
+            }
+        }
+        function Timer_stop(){
+            if(one_click == 1){
+                clearInterval(time)
+                one_click = 0
+            }
+        }
+
+        function Timer_reset(){
+            Hour = 0
+            Min = 0
+            sec = 0
+            document.getElementById("Count").innerHTML = `${round(Hour)}:${round(Min)}:${round(sec)}`
+            one_click = 0 
+            clearInterval(time)
+        }
+
+        function round(value){
+            return value < 10 ? `0${value}` : value
+        }
+        
+    </script>
+</body>
+</html>

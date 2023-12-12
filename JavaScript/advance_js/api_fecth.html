@@ -14,7 +14,7 @@
     function weatherRepo(){
 
         let city = document.getElementById('cityName').value
-        let url =   
+        let url = `https://goweather.herokuapp.com/weather/${city}`
         let fetched_url = fetch(url)
         
         fetched_url.then((Response)=>{
@@ -23,7 +23,7 @@
             for(i in data){
                 wet.innerHTML= `temperature: ${data.temperature} <br> wind: ${data.wind} <br> description: ${data.description}`
             }
-            console.log(data)
+            // console.log(data)
         }).catch((err)=>{
             wet.innerHTML = "something went Wrong"
         })
